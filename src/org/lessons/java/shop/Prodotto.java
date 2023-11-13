@@ -71,7 +71,7 @@ public class Prodotto {
 		String codiceStr = Integer.toString(codice);
 		
 		if (codiceStr.length() < 8) {
-			for (int x = 0; codiceStr.length() < 8 ; x++) {
+			while (codiceStr.length() < 8) {
 				codiceStr = '0' + codiceStr;
 			}
 		}
