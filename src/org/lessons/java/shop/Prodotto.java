@@ -66,6 +66,19 @@ public class Prodotto {
 		return codice + "-" + nome;
 	}
 	
+	public String getCodicePad() {
+		
+		String codiceStr = Integer.toString(codice);
+		
+		if (codiceStr.length() < 8) {
+			for (int x = 0; codiceStr.length() < 8 ; x++) {
+				codiceStr = '0' + codiceStr;
+			}
+		}
+		
+		return codiceStr;
+	}
+	
 	@Override
 	public String toString() {
 		
@@ -77,6 +90,7 @@ public class Prodotto {
 				+ "iva: " + getIva() + "%\n"
 				+ "prezzo ivato: " + String.format("%.02f", getPrezzoIvato()) + "€\n"
 				+ "nome completo: " + getNomeEsteso() + "\n"
+				+ "codice con pad left: " + getCodicePad() + "\n"
 				+ "----------";
 	}
 }

@@ -8,7 +8,7 @@ public class Main {
 		
 		Random rnd = new Random();
 		
-		int maxCodice = Integer.MAX_VALUE;
+		int maxCodice = 100_000_000;
 		
 		Prodotto p1 = new Prodotto(rnd.nextInt(0, maxCodice), "Sapone", "Sapone mani", 19.99, 22);
 		
